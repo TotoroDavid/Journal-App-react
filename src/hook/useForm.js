@@ -9,6 +9,17 @@ export const useForm = (initialForm = {}, formValidations = {}) => {
         createValidators()
     }, [formState])
 
+    /**
+     * esta funcion se usa para que se cambie las notas cuando las selecte 
+     * inicialmente solo seleccionaba la primera nada mas y despues no lo dejaba ver
+     * videos 305 activarUna nota para su edicion udemy
+     */
+    useEffect(() => {
+        setFormState(initialForm)
+    }, [initialForm])
+
+
+
     const isFormValid = useMemo(() => {
         for (const formValue of Object.keys(formValidation)) {
             if (formValidation[formValue] !== null) return false
