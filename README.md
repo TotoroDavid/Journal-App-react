@@ -35,4 +35,4 @@ cleaning up the logout
 
 check the project in the next link below ->
 
-https://mydiary-app-react.netlify.app/auth/login
+https://mydiary-app-react.netlify.app/
