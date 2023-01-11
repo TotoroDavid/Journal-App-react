@@ -1,4 +1,7 @@
 #JournalApp
+</br>
+
+<hr/>
 ##React-js
 
 **JournalApp** is an app from React Js that invites people who love to journal to pick up their digital pen, express themselves quickly, and evolve their ideas.
@@ -32,4 +35,4 @@ cleaning up the logout
 
 check the project in the next link below ->
 
-mydiary-app-react.netlify.app
+https://mydiary-app-react.netlify.app/auth/login
