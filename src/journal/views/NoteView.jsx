@@ -18,10 +18,8 @@ export const NoteView = () => {
     const { body, title, date, onInputChange, formState } = useForm(note)
 
     const dateString = useMemo(() => {
-
         const newDate = new Date(date)
         return newDate.toUTCString()
-
     }, [date])
 
     const fileInputRef = useRef() //para simular q toma los dos botones 
@@ -99,7 +97,7 @@ export const NoteView = () => {
                     placeholder="Add a title"
                     label='Title'
                     name='title'
-                    value={title}
+                    value={title || ''}
                     onChange={onInputChange}
                 />
                 <TextField
@@ -110,7 +108,7 @@ export const NoteView = () => {
                     placeholder="What happened today?"
                     minRows='5'
                     name='body'
-                    value={body}
+                    value={body || ''}
                     onChange={onInputChange}
                 />
             </Grid>
@@ -125,8 +123,7 @@ export const NoteView = () => {
                 </Button>
             </Grid>
 
-            <ImageGallery
-                images={note.imageUrls} />
+            <ImageGallery images={note?.imageUrls} />
         </Grid>
     )
 }

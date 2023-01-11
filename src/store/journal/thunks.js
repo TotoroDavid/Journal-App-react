@@ -6,8 +6,8 @@ import { addNewEmptyNote, setActiveNote, savingNewNote, setNotes, setSaving, upD
 
 export const startNewNote = () => {
     return async (dispatch, getState) => {
-        dispatch(savingNewNote())
 
+        dispatch(savingNewNote())
         const { uid } = getState().auth //node of Auth store
         // console.log({ uid })
 
@@ -76,13 +76,13 @@ export const startUploadingFiles = (files = []) => {
 export const startDeletingNote = () => {
     return async (dispatch, getState) => {
 
-        const { uid } = getState().auth
-        const { active: note } = getState().journal
-        // console.log({ uid, note })
+        const { uid } = getState().auth;
+        const { active: note } = getState().journal;
 
-        const docRef = doc(firebaseDB, `${uid}/journal/notes/${note.id}`)
-        await deleteDoc(docRef)
+        const docRef = doc(firebaseDB, `${uid}/journal/notes/${note.id}`);
+        await deleteDoc(docRef);
 
-        dispatch(deleteNoteById(note.id))
+        dispatch(deleteNoteById(note.id));
+
     }
 }
